@@ -14,20 +14,23 @@ struct BPItemRowView: View {
     
     var body: some View {
         HStack {
-            Text("\(item.mdate!,formatter: itemFormatter)")
-                .font(.headline)
+          
+                Text("\(item.mdate ?? Date(),formatter: itemFormatter)")
+                    .font(.headline)
                 
-            Spacer()
-            Text("\(item.sbp)")
-                .font(.title2)
-                .foregroundColor(Const.GetSBPFontColor(item.sbp))
-                .padding(.trailing, 10)
-            
-            Text("\(item.dbp)")
-                .font(.title2)
-                .foregroundColor(Const.GetDBPFontColor(item.dbp))
-                .frame(width: 50, alignment: .trailing)
+                Spacer()
+                Text("\(item.sbp)")
+                    .font(.title3)
+                    .foregroundColor(Const.GetSBPFontColor(item.sbp))
+                    .padding(.trailing, 5)
+                
+                Text("\(item.dbp)")
+                    .font(.title3)
+                    .foregroundColor(Const.GetDBPFontColor(item.dbp))
+                    .frame(width: 50, alignment: .trailing)
+                
            
+            
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+    formatter.dateFormat = "yyyy/MM/dd HH:mm"
     return formatter
 }()
 

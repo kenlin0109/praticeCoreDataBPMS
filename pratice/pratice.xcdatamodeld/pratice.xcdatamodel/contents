@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BPItem" representedClassName="BPItem" syncable="YES">
         <attribute name="dbp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="mdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="mdate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="sbp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
 </model>
