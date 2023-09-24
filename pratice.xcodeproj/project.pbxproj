@@ -20,6 +20,7 @@
 		A1E6962F2AC00D300081CF7A /* NewDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6962E2AC00D300081CF7A /* NewDetailView.swift */; };
 		A1E696312AC010390081CF7A /* ReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696302AC010390081CF7A /* ReadView.swift */; };
 		A1E696332AC020850081CF7A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696322AC020850081CF7A /* Const.swift */; };
+		A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696342AC023E60081CF7A /* BPItemRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A1E6962E2AC00D300081CF7A /* NewDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailView.swift; sourceTree = "<group>"; };
 		A1E696302AC010390081CF7A /* ReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadView.swift; sourceTree = "<group>"; };
 		A1E696322AC020850081CF7A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A1E696342AC023E60081CF7A /* BPItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPItemRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				A1E696132ABFFB890081CF7A /* Assets.xcassets */,
 				A1E6961A2ABFFB890081CF7A /* pratice.xcdatamodeld */,
 				A1E696152ABFFB890081CF7A /* Preview Content */,
+				A1E696342AC023E60081CF7A /* BPItemRowView.swift */,
 			);
 			path = pratice;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				A1E696252ABFFBF60081CF7A /* BPItem+CoreDataProperties.swift in Sources */,
 				A1E696312AC010390081CF7A /* ReadView.swift in Sources */,
 				A1E696122ABFFB880081CF7A /* ContentView.swift in Sources */,
+				A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */,
 				A1E696242ABFFBF60081CF7A /* BPItem+CoreDataClass.swift in Sources */,
 				A1E6962F2AC00D300081CF7A /* NewDetailView.swift in Sources */,
 				A1E696102ABFFB880081CF7A /* praticeApp.swift in Sources */,

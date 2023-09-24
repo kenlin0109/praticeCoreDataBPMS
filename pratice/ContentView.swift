@@ -23,7 +23,7 @@ struct ContentView: View {
                     NavigationLink {
                         DetailView(item: item)
                     } label: {
-                        Text("\(item.mdate!,formatter: itemFormatter) \t \(item.sbp) \t \(item.dbp)")
+                        BPItemRowView(item: item)
                     }
                 }
                 .onDelete(perform: deleteItems)
