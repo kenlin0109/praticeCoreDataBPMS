@@ -14,8 +14,11 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = BPItem(context: viewContext)
+            newItem.mdate = Date()
+            newItem.sbp = Const.SBPNormal + Int.random(in: -20...20)
+            newItem.dbp = Const.DBPNormal + Int.random(in: -10...10)
+            
         }
         do {
             try viewContext.save()
