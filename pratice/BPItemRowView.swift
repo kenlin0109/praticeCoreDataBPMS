@@ -10,20 +10,23 @@ import SwiftUI
 
 struct BPItemRowView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @State var item: BPItem
+    @ObservedObject var item: BPItem
     
     var body: some View {
         HStack {
             Text("\(item.mdate!,formatter: itemFormatter)")
                 .font(.headline)
+                
             Spacer()
             Text("\(item.sbp)")
                 .font(.title2)
                 .foregroundColor(Const.GetSBPFontColor(item.sbp))
-            Spacer()
+                .padding(.trailing, 10)
+            
             Text("\(item.dbp)")
                 .font(.title2)
                 .foregroundColor(Const.GetDBPFontColor(item.dbp))
+                .frame(width: 50, alignment: .trailing)
            
         }
     }
