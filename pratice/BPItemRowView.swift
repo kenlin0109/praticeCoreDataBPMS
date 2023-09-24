@@ -19,11 +19,11 @@ struct BPItemRowView: View {
             Spacer()
             Text("\(item.sbp)")
                 .font(.title2)
-                .foregroundColor(item.sbp > Const.SBPAlert ? Const.SBPAlertColor : Const.SBPNormalColor)
+                .foregroundColor(Const.GetSBPFontColor(item.sbp))
             Spacer()
             Text("\(item.dbp)")
                 .font(.title2)
-                .foregroundColor(item.dbp > Const.DBPAlert ? Const.DBPAlertColor : Const.DBPNormalColor)
+                .foregroundColor(Const.GetDBPFontColor(item.dbp))
            
         }
     }
