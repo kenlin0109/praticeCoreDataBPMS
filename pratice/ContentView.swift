@@ -18,23 +18,26 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        DetailView(item: item)
-                    } label: {
-                        BPItemRowView(item: item)
+            VStack{
+                List {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            DetailView(item: item)
+                        } label: {
+                            BPItemRowView(item: item)
+                        }
                     }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
                 
-                ToolbarItem {
-                    NavigationLink {
-                        NewDetailView()
-                    } label: {
-                        Label("Add Item", systemImage: "plus")
+                .toolbar {
+                    
+                    ToolbarItem {
+                        NavigationLink {
+                            NewDetailView()
+                        } label: {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
             }
@@ -59,9 +62,3 @@ struct ContentView: View {
 }
 
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}

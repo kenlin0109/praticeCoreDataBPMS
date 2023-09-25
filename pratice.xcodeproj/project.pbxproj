@@ -21,6 +21,8 @@
 		A1E696312AC010390081CF7A /* ReadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696302AC010390081CF7A /* ReadView.swift */; };
 		A1E696332AC020850081CF7A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696322AC020850081CF7A /* Const.swift */; };
 		A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696342AC023E60081CF7A /* BPItemRowView.swift */; };
+		A1E696372AC14F080081CF7A /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696362AC14F080081CF7A /* HomePageView.swift */; };
+		A1E696392AC150FA0081CF7A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696382AC150FA0081CF7A /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		A1E696302AC010390081CF7A /* ReadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadView.swift; sourceTree = "<group>"; };
 		A1E696322AC020850081CF7A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A1E696342AC023E60081CF7A /* BPItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPItemRowView.swift; sourceTree = "<group>"; };
+		A1E696362AC14F080081CF7A /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		A1E696382AC150FA0081CF7A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +77,11 @@
 		A1E6960E2ABFFB880081CF7A /* pratice */ = {
 			isa = PBXGroup;
 			children = (
-				A1E696322AC020850081CF7A /* Const.swift */,
 				A1E6960F2ABFFB880081CF7A /* praticeApp.swift */,
+				A1E696322AC020850081CF7A /* Const.swift */,
+				A1E696362AC14F080081CF7A /* HomePageView.swift */,
 				A1E696112ABFFB880081CF7A /* ContentView.swift */,
+				A1E696382AC150FA0081CF7A /* ChartView.swift */,
 				A1E696282ABFFF4E0081CF7A /* DetailView.swift */,
 				A1E696302AC010390081CF7A /* ReadView.swift */,
 				A1E6962E2AC00D300081CF7A /* NewDetailView.swift */,
@@ -170,9 +176,11 @@
 				A1E6961C2ABFFB890081CF7A /* pratice.xcdatamodeld in Sources */,
 				A1E696292ABFFF4E0081CF7A /* DetailView.swift in Sources */,
 				A1E696192ABFFB890081CF7A /* Persistence.swift in Sources */,
+				A1E696392AC150FA0081CF7A /* ChartView.swift in Sources */,
 				A1E696252ABFFBF60081CF7A /* BPItem+CoreDataProperties.swift in Sources */,
 				A1E696312AC010390081CF7A /* ReadView.swift in Sources */,
 				A1E696122ABFFB880081CF7A /* ContentView.swift in Sources */,
+				A1E696372AC14F080081CF7A /* HomePageView.swift in Sources */,
 				A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */,
 				A1E696242ABFFBF60081CF7A /* BPItem+CoreDataClass.swift in Sources */,
 				A1E6962F2AC00D300081CF7A /* NewDetailView.swift in Sources */,
