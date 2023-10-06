@@ -23,6 +23,9 @@
 		A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696342AC023E60081CF7A /* BPItemRowView.swift */; };
 		A1E696372AC14F080081CF7A /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696362AC14F080081CF7A /* HomePageView.swift */; };
 		A1E696392AC150FA0081CF7A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696382AC150FA0081CF7A /* ChartView.swift */; };
+		A1E6963B2AC29CE50081CF7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6963A2AC29CE50081CF7A /* SettingsView.swift */; };
+		A1E6967D2ACFD8400081CF7A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6967C2ACFD8400081CF7A /* FirstView.swift */; };
+		A1E6967F2ACFEC060081CF7A /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6967E2ACFEC060081CF7A /* AnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		A1E696342AC023E60081CF7A /* BPItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPItemRowView.swift; sourceTree = "<group>"; };
 		A1E696362AC14F080081CF7A /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		A1E696382AC150FA0081CF7A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		A1E6963A2AC29CE50081CF7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1E6967C2ACFD8400081CF7A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		A1E6967E2ACFEC060081CF7A /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +91,15 @@
 				A1E696282ABFFF4E0081CF7A /* DetailView.swift */,
 				A1E696302AC010390081CF7A /* ReadView.swift */,
 				A1E6962E2AC00D300081CF7A /* NewDetailView.swift */,
+				A1E6963A2AC29CE50081CF7A /* SettingsView.swift */,
+				A1E696342AC023E60081CF7A /* BPItemRowView.swift */,
 				A1E696262ABFFE2A0081CF7A /* FormatterCollection.swift */,
+				A1E6967C2ACFD8400081CF7A /* FirstView.swift */,
+				A1E6967E2ACFEC060081CF7A /* AnimationView.swift */,
 				A1E696182ABFFB890081CF7A /* Persistence.swift */,
 				A1E696132ABFFB890081CF7A /* Assets.xcassets */,
 				A1E6961A2ABFFB890081CF7A /* pratice.xcdatamodeld */,
 				A1E696152ABFFB890081CF7A /* Preview Content */,
-				A1E696342AC023E60081CF7A /* BPItemRowView.swift */,
 			);
 			path = pratice;
 			sourceTree = "<group>";
@@ -173,18 +182,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E6963B2AC29CE50081CF7A /* SettingsView.swift in Sources */,
 				A1E6961C2ABFFB890081CF7A /* pratice.xcdatamodeld in Sources */,
 				A1E696292ABFFF4E0081CF7A /* DetailView.swift in Sources */,
 				A1E696192ABFFB890081CF7A /* Persistence.swift in Sources */,
 				A1E696392AC150FA0081CF7A /* ChartView.swift in Sources */,
 				A1E696252ABFFBF60081CF7A /* BPItem+CoreDataProperties.swift in Sources */,
 				A1E696312AC010390081CF7A /* ReadView.swift in Sources */,
+				A1E6967F2ACFEC060081CF7A /* AnimationView.swift in Sources */,
 				A1E696122ABFFB880081CF7A /* ContentView.swift in Sources */,
 				A1E696372AC14F080081CF7A /* HomePageView.swift in Sources */,
 				A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */,
 				A1E696242ABFFBF60081CF7A /* BPItem+CoreDataClass.swift in Sources */,
 				A1E6962F2AC00D300081CF7A /* NewDetailView.swift in Sources */,
 				A1E696102ABFFB880081CF7A /* praticeApp.swift in Sources */,
+				A1E6967D2ACFD8400081CF7A /* FirstView.swift in Sources */,
 				A1E696272ABFFE2A0081CF7A /* FormatterCollection.swift in Sources */,
 				A1E696332AC020850081CF7A /* Const.swift in Sources */,
 			);

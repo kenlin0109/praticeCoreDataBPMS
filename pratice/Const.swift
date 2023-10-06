@@ -17,8 +17,7 @@ struct Const {
     static let SBPNormalColor = Color.blue
     static let SBPAlertColor1 = Color.orange
     static let SBPAlertColor2 = Color.red
-
-
+    
     static let DBPNormal = 80
     static let DBPMax = 150
     static let DBPMin = 20
@@ -33,7 +32,4 @@ struct Const {
     static func GetDBPFontColor(_ dbp: Int) -> Color {
         return (dbp > DBPAlert) ? DBPAlertColor : DBPNormalColor
     }
-    
-    
-
 }

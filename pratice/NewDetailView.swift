@@ -12,7 +12,7 @@ import SwiftUI
 struct NewDetailView : View{
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode
-    
+    @EnvironmentObject var language: LanguageTheme
     
     @State var editMdate = Date()
     @State var editSBP = Const.SBPNormal
@@ -20,23 +20,20 @@ struct NewDetailView : View{
     
     var body: some View {
         List {
-            DatePicker(selection: $editMdate, label: { Text("量測時間") })
+            DatePicker(selection: $editMdate, label: { Text(language.isZhorEn ? "Measurement time" : "量測時間") })
             
-            
-            Picker("收縮壓", selection: $editSBP) {
+            Picker(language.isZhorEn ? "SBP" : "收縮壓", selection: $editSBP) {
                 ForEach(Const.SBPMin..<Const.SBPMax) { n in
                     Text("\(n)").tag(n)
                 }
             }
-            
-            
-            Picker("舒張壓", selection: $editDBP)  {
+            Picker(language.isZhorEn ? "DBP" : "舒張壓", selection: $editDBP)  {
                 ForEach(Const.DBPMin..<Const.DBPMax) { n in
                     Text("\(n)").tag(n)
                 }
             }
             .toolbar {
-                Button("Save") {
+                Button(language.isZhorEn ? "Save" : "儲存") {
                     @State var newItem = BPItem(context: viewContext)
                     newItem.mdate = editMdate
                     newItem.sbp = editSBP
@@ -50,7 +47,6 @@ struct NewDetailView : View{
                     }
                     self.presentationMode.wrappedValue.dismiss()
                 }
-                
             }
         }
     }
