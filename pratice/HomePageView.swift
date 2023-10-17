@@ -39,6 +39,10 @@ struct HomePageView: View {
                         Image(systemName: "gearshape.fill")
                         Text(language.isZhorEn ? "Setting" : "設定")
                     }
+                    SettingsTestView().tabItem {
+                        Image(systemName: "diamond.inset.filled")
+                        Text("設定測試")
+                    }
                     FirstView().tabItem{
                         Image(systemName: "hexagon.fill")
                         Text("測試")
@@ -47,6 +51,7 @@ struct HomePageView: View {
                         Image(systemName: "octagon.fill")
                         Text("測試2")
                     }
+                    
                 }
                 .preferredColorScheme(theme.isDarkMode ? .dark : .light)
             }

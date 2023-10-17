@@ -26,6 +26,7 @@
 		A1E6963B2AC29CE50081CF7A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6963A2AC29CE50081CF7A /* SettingsView.swift */; };
 		A1E6967D2ACFD8400081CF7A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6967C2ACFD8400081CF7A /* FirstView.swift */; };
 		A1E6967F2ACFEC060081CF7A /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E6967E2ACFEC060081CF7A /* AnimationView.swift */; };
+		A1E696832AD7DA250081CF7A /* SettingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E696822AD7DA250081CF7A /* SettingTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		A1E6963A2AC29CE50081CF7A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A1E6967C2ACFD8400081CF7A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		A1E6967E2ACFEC060081CF7A /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		A1E696822AD7DA250081CF7A /* SettingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				A1E696132ABFFB890081CF7A /* Assets.xcassets */,
 				A1E6961A2ABFFB890081CF7A /* pratice.xcdatamodeld */,
 				A1E696152ABFFB890081CF7A /* Preview Content */,
+				A1E696822AD7DA250081CF7A /* SettingTest.swift */,
 			);
 			path = pratice;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				A1E696352AC023E60081CF7A /* BPItemRowView.swift in Sources */,
 				A1E696242ABFFBF60081CF7A /* BPItem+CoreDataClass.swift in Sources */,
 				A1E6962F2AC00D300081CF7A /* NewDetailView.swift in Sources */,
+				A1E696832AD7DA250081CF7A /* SettingTest.swift in Sources */,
 				A1E696102ABFFB880081CF7A /* praticeApp.swift in Sources */,
 				A1E6967D2ACFD8400081CF7A /* FirstView.swift in Sources */,
 				A1E696272ABFFE2A0081CF7A /* FormatterCollection.swift in Sources */,
