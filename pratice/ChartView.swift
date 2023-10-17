@@ -19,61 +19,87 @@ struct ChartView: View {
     private var items: FetchedResults<BPItem>
     
     @State var bpdict = [String: bpinfo]()
+    @State var bpdarr = [String]()
     @State var mindbp: Int32 = 120
     @State var maxsbp: Int32 = 0
     
     var body: some View {
-        
+        NavigationView {
             VStack {
-                Text(language.isZhorEn ? "Statistics" : "統計")
-                    .font(.largeTitle)
-                    .foregroundColor(.black)
                 Chart {
-                    ForEach(Array(bpdict.keys.sorted(by: >).enumerated()), id: \.offset) { index, key in
+                    ForEach(Array(bpdarr.enumerated()), id: \.offset) { index, key in
+//                  ForEach(Array(bpdict.keys.sorted(by: >).enumerated()), id: \.offset) { index, key in
                         //ForEach (bpdict.keys.sorted(by: >), id:\.self) { key in
                         LineMark(
-                            x: .value("date", bpdict[key]?.mdate ?? Date()),
+                            x: .value("date", index),
                             y: .value("sbp", bpdict[key]?.sbp ?? 0)
                         )
-                        .foregroundStyle(.red)
-                        .foregroundStyle(by: .value("Type", "SBP"))
+                        //                        .foregroundStyle(.blue)
+                        .foregroundStyle(by: .value("Type", "\(language.isZhorEn ? "SBP" : "收縮壓")"))
                         
                         PointMark(
-                            x: .value("date", bpdict[key]?.mdate ?? Date()),
+                            x: .value("date", index),
                             y: .value("sbp", bpdict[key]?.sbp ?? 0)
                         )
-                        .foregroundStyle(.red)
+                        //                       .foregroundStyle(.blue)
                         .annotation {
-                            Text("\(bpdict[key]?.sbp ?? 0)")
+                            Text("\(bpdict[key]?.sbp ?? 0)")  //  \(bpdict[key]?.mdate ?? Date(), formatter: MMddFormatter)
                         }
                         
+                        
                         LineMark(
-                            x: .value("date", bpdict[key]?.mdate ?? Date()),
+                            x: .value("date", index),
                             y: .value("dbp", bpdict[key]?.dbp ?? 0)
                         )
-                        .foregroundStyle(.blue)
-                        .foregroundStyle(by: .value("Type", "DBP"))
+                        //                      .foregroundStyle(.green)
+                        .foregroundStyle(by: .value("Type", "\(language.isZhorEn ? "DBP" : "舒張壓")"))
                         
                         PointMark(
-                            x: .value("date", bpdict[key]?.mdate ?? Date()),
+                            x: .value("date", index),
                             y: .value("sbp", bpdict[key]?.dbp ?? 0)
                         )
-                        .foregroundStyle(Color.blue)
+                        .foregroundStyle(Color.green)
                         .annotation {
                             Text("\(bpdict[key]?.dbp ?? 0)")
                         }
+                        
+                        LineMark(
+                            x: .value("date", index),
+                            y: .value("sbp", 120)
+                        )
+                        //                        .foregroundStyle(.blue)
+                        .foregroundStyle(by: .value("Type", "\(language.isZhorEn ? "standand SBP" : "標準收縮壓")"))
+                        
+                        LineMark(
+                            x: .value("date", index),
+                            y: .value("dbp", 80)
+                        )
+                        //                        .foregroundStyle(.blue)
+                        .foregroundStyle(by: .value("Type", "\(language.isZhorEn ? "standand DBP" : "標準舒張壓")"))
                     }
                 }
                 .chartXAxis{
-                    AxisMarks(values: .stride(by: .day)) { value in
+                    //                    AxisMarks(values: .stride(by: .day)) { value in
+                    AxisMarks(values: .stride(by: 1)) { value in
+                        
                         AxisGridLine()
                         AxisValueLabel{
-                            if let localDate = value.as(Date.self) {
-                                let formattedDate = MMddFormatter.string(from: localDate)
-                                Text(formattedDate)
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color.black)
-                                    .rotationEffect(Angle(degrees: 40))
+                            if let localIndex = value.as(Int.self) {
+                                if localIndex>=0 && localIndex<bpdict.count {
+                                    //                            if let localDate = bpdict[value]?.mdate! {
+                                    //                                let formattedDate = MMddFormatter.string(from: localDate)
+                                    //                                Text(formattedDate)
+                                    let key = bpdarr[localIndex]
+                                    if let localDate = bpdict[key]?.mdate {
+                                        let formattedDate = MMddFormatter.string(from: localDate)
+                                        Text(formattedDate)
+                                            .font(.system(size: 12))
+                                            .foregroundColor(Color.black)
+                                            .rotationEffect(Angle(degrees: 40))
+                                    }
+                                }
+                                
+                                
                             }
                         }
                     }
@@ -85,9 +111,10 @@ struct ChartView: View {
             .padding(20)
             
             //Spacer()
-        
+        }
         .onAppear {
             filterdata()
+            bpdarr = bpdict.keys.sorted(by: <)
             //            let formatter = DateFormatter()
             //            formatter.dateFormat = "yyyy/MM/dd"
             //
@@ -110,7 +137,7 @@ struct ChartView: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         
-        let mindate = Calendar.current.date(byAdding: .day, value: -14, to: Date())
+        let mindate = Calendar.current.date(byAdding: .day, value: -140, to: Date())
         let today = Date()
         for item in items {
             if item.mdate!>mindate! && item.mdate!<today {
@@ -131,6 +158,8 @@ struct ChartView: View {
                 }
             }
         }
+        if mindbp==120 { mindbp = 50 }
+        if maxsbp==0 { maxsbp = 120 }
     }
 }
 
